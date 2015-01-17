@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "ThisSongIsSick Enhancer",
+  "description": "Lets go",
+  "version": "1.0",
+
+  "permissions": [
+    "https://ajax.googleapis.com/",
+    "tabs"
+  ],
+
+  "content_scripts": [
+  {
+    "matches": ["http://thissongissick.com/*"],
+    "cs": ["player.css"],
+    "js": ["jquery.js","soundcloud.js","myscript.js"],
+    "run_at": "document_start"
+  }
+  ],
+  "web_accessible_resources": [
+      "player.css"
+  ]
+}
